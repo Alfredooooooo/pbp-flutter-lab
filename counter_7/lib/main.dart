@@ -1,4 +1,4 @@
-import 'package:counter_7/screens/home_page.dart';
+import 'package:counter_7/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

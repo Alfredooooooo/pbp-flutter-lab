@@ -1,3 +1,5 @@
+import 'package:counter_7/pages/form_page.dart';
+import 'package:counter_7/widgets/drawer_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -39,6 +41,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: const Text("Program Counter"),
         ),
+        drawer: DrawerWidget(),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

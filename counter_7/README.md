@@ -36,3 +36,41 @@ Const tidak dapat digunakan saat kita tidak tahu valuenya saat waktu compile (co
 4. Menerapkan styling pada hal-hal yang diperlukan seperti tulisan genap dan ganjil
 5. Menerapkan ternary operator untuk melakukan filter informasi yang masuk ke dalam flutter application
 6. Menerapkan bonus dengan cara ternary operator juga dengan if statement saat \_counter <= 0
+
+## Jawab Pertanyaan Tugas 8
+
+### Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+
+Navigator.push akan menambahkan route ke stack berisi routes yang di manage oleh Navigator, sedangkan Navigator.pushReplacement akan menambahkan route ke stack berisi routes dan membuang/mereplace route sebelumnya berada pada stack apabila route yang sekarang telah selesai di load. Esensialnya Navigator.push tidak akan melakukan "pop" route karena hal yang dilakukannya adalah push. Namun Navigator.pushReplacement akan melakukan push sekaligus pop dalam waktu bersamaan sehingga memori yang digunakan akan semakin baik.
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+-   Drawer -> Widget yang merender navigation drawer yang bisa dibuka dan ditutup sesuai gestur yang dipakai (Navigation menu)
+-   ListTile -> Widget yang digunakan untuk mengisi ListView (tidak selamanya), namun juga terdiri atas leading dan trailing serta title didalamnya
+-   Form -> Container yang menampung field=field pada form
+-   ListView -> Sangat umum digunakan untuk widget yang dapat di scroll, berbeda dengan column
+-   SizedBox -> Semacam div pada flutter yang dapat mempunyai tinggi dan lebar
+-   TextFormField -> Semacam text field untuk form
+-   DropdownButtonFormField -> Semacam dropdown untuk form
+-   Padding dan EdgeInsets -> Mengatur Padding
+-   Icon -> Menampilkan Icon
+-   TextButton -> Button yang mempunyai teks dan event listener
+-   dan masih banyak fungsinya seperti OutlinedButton (merupakan text button dengan fungsi lebih advanced)
+
+### Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+
+-   onPressed
+-   onChange
+-   onSaved
+-   onTap
+
+### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+
+Navigator berfungsi dengan menyimpan stack dari route-route yang digunakan app. Di mana route tersebut merupakan widget yang berupa page baru. Terdapat method push untuk berpindah ke route yang ditentukan dengan builder yang diberikan, yang menghasilkan widget page yang dituju. Serta pop atau back button yang berguna untuk kembali ke page sebelumnya.
+
+### Cara implementasi
+
+-   Memindahkan file drawer ke satu file tersendiri pada folder widgets
+-   Membuat page tambah budget pada file form_page.dart pada folder pages
+-   Menyimpan data di budget.dart pada folder models
+-   Membuat page untuk melihat data pada data_page.dart di folder pages yang mengambil data dari model yang sudah dibuat
