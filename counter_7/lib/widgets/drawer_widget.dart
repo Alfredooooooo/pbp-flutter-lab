@@ -1,8 +1,8 @@
 import 'package:counter_7/pages/data_page.dart';
+import 'package:counter_7/pages/form_page.dart';
+import 'package:counter_7/pages/home_page.dart';
+import 'package:counter_7/pages/mywatchlist_page.dart';
 import 'package:flutter/material.dart';
-
-import '../pages/form_page.dart';
-import '../pages/home_page.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({Key? key}) : super(key: key);
@@ -44,6 +44,18 @@ class DrawerWidget extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const DataPage()),
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.local_movies),
+            title: const Text('My Watch List'),
+            onTap: () {
+              // Route menu ke halaman form
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MyWatchListPage()),
               );
             },
           ),

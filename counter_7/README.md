@@ -74,3 +74,35 @@ Navigator berfungsi dengan menyimpan stack dari route-route yang digunakan app. 
 -   Membuat page tambah budget pada file form_page.dart pada folder pages
 -   Menyimpan data di budget.dart pada folder models
 -   Membuat page untuk melihat data pada data_page.dart di folder pages yang mengambil data dari model yang sudah dibuat
+
+## Jawab Pertanyaan Tugas 9
+
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Bisa, namun pengambilan data JSON akan lebih baik jika dibuat model terlebih dahulu karena model akan memudahkan kita dalam mengambil data JSON yang kita inginkan. Selain itu, pengambilan data tanpa model sangat vurnerable terhadap error karena kita tidak tahu data apa saja yang akan kita ambil.
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+-   Scaffold -> Widget yang digunakan untuk membuat layout pada flutter
+-   ListView -> Widget yang dapat di scroll tidak seperti widget Column
+-   Row, Column -> Widget yang mengatur layout suatu children didalamnya
+-   OutlinedButton -> Widget yang digunakan untuk membuat button
+-   Text -> Widget yang digunakan untuk menampilkan text
+-   SizedBox -> Widget yang digunakan untuk membuat jarak antar widget
+-   Padding -> Widget yang digunakan untuk membuat jarak antardalam widget
+-   Icon -> Widget yang digunakan untuk menampilkan icon
+-   Drawer -> Widget yang digunakan untuk membuat navigation drawer
+-   ListTile -> Widget yang digunakan untuk membuat list
+-   dan masih banyak lagi
+
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+Http Package adalah library yang dipakai guna mendapatkan http request. Http akan melakukan fetching data dalam dan mereturn http response. Response tersebut akan di decode menggunakan jsonDecode() yang akan menghasilkan data-data JSON dalam bentuk Map. Data-data Map tersebut akan kemudian diolah sehingga data-data dalam bentuk Map tersebut dapat menjadi data-data pada objek yang merupakan Model instance yang sesuai dengan struktur JSON tersebut.
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+-   Menambahkan widget baru yang merupakan MyWatchListPage pada file drawer di folder widgets
+-   Membuat page yang menampilkan My Watch List hasil fetch data dari heroku tugas 3 pada folder pages
+-   Melakukan juga refactoring fetch data function ke file terpisah pada folder services
+-   Menambahkan checklist button dan see details yang mengarahkan ke page baru yaitu DetailMyWatchListPage pada folder pages
+-   Membuat page untuk melihat detail-detail dari elemen yang di klik see detailsnya
