@@ -26,6 +26,12 @@ class _FormPageState extends State<FormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: BackButton(
+          onPressed: () => {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: ((context) => const HomePage())))
+          },
+        ),
         title: const Text('Form Budget'),
       ),
       drawer: const DrawerWidget(),
